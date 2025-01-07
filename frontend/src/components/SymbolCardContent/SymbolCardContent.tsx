@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import SymbolCardContentStatic from '../SymbolCardContentStatic';
+import SymbolCardContentStatic from '@/components/SymbolCardContentStatic';
 import './SymbolCardContent.css';
 
 type SymbolCardContentProps = {

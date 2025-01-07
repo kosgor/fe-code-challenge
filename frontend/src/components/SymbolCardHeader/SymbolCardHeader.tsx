@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import TrendIcon from '../TrendIcon/TrendIcon'
+import TrendIcon from '@/components/TrendIcon'
 import './SymbolCardHeader.css'
 
 type SymbolCardHeaderProps = {
