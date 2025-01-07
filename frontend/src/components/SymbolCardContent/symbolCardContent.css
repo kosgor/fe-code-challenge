@@ -1,0 +1,11 @@
+.symbolCardContent__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 4px;
+  font-weight: 600;
+}
+
+.symbolCardContent__price__number {
+  font-size: 30px;
+}

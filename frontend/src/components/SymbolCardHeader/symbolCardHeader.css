@@ -1,0 +1,17 @@
+.symbolCardHeader__trend {
+  background-color: var(--colorDark);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: var(--colorWhite);
+  padding-left: 9px;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  justify-content: space-between;
+}
+
+.symbolCardHeader__trend__icon {
+  position: relative;
+  top: -12px;
+  right: -14px;
+}
