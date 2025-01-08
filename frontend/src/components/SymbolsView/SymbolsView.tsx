@@ -16,14 +16,14 @@ const SymbolsView = () => {
 
   return (
     <div className="symbolsView">
-      <DesktopInfo/>
+      <DesktopInfo />
       <div className="symbolsView__content">
         <div className="symbolsView__chart">
           <h3>PRICE HISTORY</h3>
-          <PriceChart symbolId={activeSymbol}/>
+          <PriceChart symbolId={activeSymbol} />
         </div>
         <div className="symbolsView__cards">
-          <SymbolsGrid onSymbolClick={handleSymbolClick}/>
+          <SymbolsGrid onSymbolClick={handleSymbolClick} />
         </div>
       </div>
     </div>
