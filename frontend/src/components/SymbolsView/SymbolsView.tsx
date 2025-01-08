@@ -22,8 +22,10 @@ const SymbolsView = () => {
           <h3>PRICE HISTORY</h3>
           <PriceChart symbolId={activeSymbol} />
         </div>
-        <div className="symbolsView__cards">
-          <SymbolsGrid onSymbolClick={handleSymbolClick} />
+        <div className="symbolsView__cards-wrapper">
+          <div className="symbolsView__cards">
+            <SymbolsGrid onSymbolClick={handleSymbolClick}/>
+          </div>
         </div>
       </div>
     </div>

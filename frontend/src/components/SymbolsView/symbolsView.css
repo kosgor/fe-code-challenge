@@ -21,3 +21,23 @@
   border-radius: 5px;
   flex-grow: 1;
 }
+
+.symbolsView__cards-wrapper {
+  width: 100%;
+  height: calc(100vh - 310px);
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .symbolsView__cards-wrapper {
+    height: calc(100vh - 220px);
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.symbolsView__cards {
+  height: 100%;
+  overflow: auto;
+}
