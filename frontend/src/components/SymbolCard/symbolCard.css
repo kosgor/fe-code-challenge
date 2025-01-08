@@ -1,7 +1,33 @@
 .symbolCard {
-  border: 2px solid black; /* just for visibility, feel free to remove it */
-  margin: 10px; /* just for visibility, feel free to remove it */
-  padding: 10px; /* just for visibility, feel free to remove it */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--colorWhite);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.symbolCard--selected {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  transform: scale(1.04);
+}
+
+.symbolCard--unselected {
+  transform: scale(0.96);
+}
+
+.symbolCard--negative-with-shake {
+  animation: flashRed 1s forwards, shake 0.62s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.symbolCard--positive-with-shake {
+  animation: flashGreen 1s forwards, shake 0.62s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.symbolCard--negative-trend {
+  animation: flashRed 1s ease;
+}
+
+.symbolCard--positive-trend {
+  animation: flashGreen 1s ease;
 }
 
 .symbolCard__shake {
@@ -34,5 +60,17 @@
   60%,
   70% {
     transform: translateX(6px);
+  }
+}
+
+@keyframes flashGreen {
+  30% {
+    box-shadow: 0 0 10px green, 0 0 20px green;
+  }
+}
+
+@keyframes flashRed {
+  30% {
+    box-shadow: 0 0 10px red, 0 0 20px red;
   }
 }

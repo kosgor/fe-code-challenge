@@ -1,7 +1,8 @@
 import './symbolCard.css';
 import { useAppSelector } from '@/hooks/redux';
-import SymbolCardContent from '@/components/SymbolCardContent';
-import SymbolCardHeader from '@/components/SymbolCardHeader';
+import { useGetCardClassName } from '@/components/SymbolCard/src/hooks/useGetCardClassName';
+import SymbolCardContent from './src/components/SymbolCardContent';
+import SymbolCardHeader from './src/components/SymbolCardHeader';
 
 type SymbolCardProps = {
   id: string;
@@ -14,20 +15,21 @@ const SymbolCard = ({ id, onClick, price }: SymbolCardProps) => {
     ...state.stocks.entities[id],
     showCardInfo: state.store.showCardInfo
   }))
+  const formattedPrice = Math.round(price);
+  const { className, onAnimationEnds } = useGetCardClassName(id, formattedPrice);
   const handleOnClick = () => {
     onClick(id);
   };
-  const formattedPrice = Math.round(price);
   return (
-    <div onClick={handleOnClick} className={'symbolCard'}>
+    <div onClick={handleOnClick} className={className} onAnimationEnd={onAnimationEnds}>
       <SymbolCardHeader id={id} trend={trend}/>
-        <SymbolCardContent
-          showCardInfo={showCardInfo}
-          price={formattedPrice}
-          companyName={companyName}
-          industry={industry}
-          marketCap={marketCap}
-        />
+      <SymbolCardContent
+        showCardInfo={showCardInfo}
+        price={formattedPrice}
+        companyName={companyName}
+        industry={industry}
+        marketCap={marketCap}
+      />
     </div>
   );
 };

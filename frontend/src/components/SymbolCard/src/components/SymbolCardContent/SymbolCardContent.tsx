@@ -1,6 +1,6 @@
 import { memo } from 'react';
-import SymbolCardContentStatic from '@/components/SymbolCardContentStatic';
-import './SymbolCardContent.css';
+import SymbolCardContentStatic from '@/components/SymbolCard/src/components/SymbolCardContentStatic';
+import './symbolCardContent.css';
 
 type SymbolCardContentProps = {
   price: number;

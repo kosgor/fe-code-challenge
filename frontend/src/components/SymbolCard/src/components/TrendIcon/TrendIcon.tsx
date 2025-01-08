@@ -1,6 +1,6 @@
 import upIcon from '@/assets/up.png';
 import downIcon from '@/assets/down.png';
-import './TrendIcon.css'
+import './trendIcon.css'
 import {memo} from 'react';
 
 type TrendIconProps = {
