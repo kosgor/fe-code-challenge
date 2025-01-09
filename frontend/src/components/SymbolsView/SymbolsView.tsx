@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { useAppDispatch } from '@/hooks/redux';
+import {useAppDispatch, useAppSelector} from '@/hooks/redux';
 import { setSelectedSymbol } from '@/store/dashboardOptionsSlice';
 import SymbolsGrid from '@/components/SymbolsGrid';
 import PriceChart from '@/components/PriceChart';
@@ -7,10 +6,9 @@ import DesktopInfo from './src/DesktopInfo';
 import './symbolsView.css';
 
 const SymbolsView = () => {
-  const [activeSymbol, setActiveSymbol] = useState<null | string>(null);
+  const { activeSymbol } = useAppSelector((state) => state.store);
   const dispatch = useAppDispatch();
   const handleSymbolClick = (symbolId: string) => {
-    setActiveSymbol((s) => (s === symbolId ? null : symbolId));
     dispatch(setSelectedSymbol(symbolId));
   };
 
