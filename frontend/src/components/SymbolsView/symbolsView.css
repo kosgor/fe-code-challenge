@@ -1,25 +1,14 @@
 .symbolsView__content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   gap: 12px;
   margin-top: 24px;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1023px) {
   .symbolsView__content {
-    flex-direction: row-reverse;
+    flex-direction: column;
   }
-}
-
-.symbolsView__chart {
-  width: 400px;
-}
-
-.symbolsView__cards {
-  padding: 24px;
-  background-color: #e2e2e4;
-  border-radius: 5px;
-  flex-grow: 1;
 }
 
 .symbolsView__cards-wrapper {
@@ -37,7 +26,25 @@
   }
 }
 
+
+.symbolsView__chart {
+  width: 400px;
+  margin-right: 12px;
+}
+
+@media (max-width: 1023px) {
+  .symbolsView__chart {
+    width: 100%;
+    padding: 0 12px;
+    margin-right: 0;
+  }
+}
+
 .symbolsView__cards {
+  padding: 24px;
+  background-color: #e2e2e4;
+  border-radius: 5px;
+  flex-grow: 1;
   height: 100%;
   overflow: auto;
 }
