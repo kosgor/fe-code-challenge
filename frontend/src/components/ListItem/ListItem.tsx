@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { memo } from 'react';
 import './listItem.css';
+
 type ListItemProps = {
   Icon: React.ReactNode;
   label: string;
@@ -23,4 +24,4 @@ const ListItem = ({ Icon, label, spacing }: ListItemProps) => {
   );
 };
 
-export default ListItem;
+export default memo(ListItem);

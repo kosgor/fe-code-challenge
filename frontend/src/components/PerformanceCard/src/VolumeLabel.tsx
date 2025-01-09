@@ -10,7 +10,13 @@ type TrendLabelProps = {
 };
 
 const VolumeLabel = ({ volume, change }: TrendLabelProps) => {
+  const formattedVolume = new Intl.NumberFormat('en-US', {
+    notation: 'compact',
+    compactDisplay: 'short',
+    maximumFractionDigits: 1,
+    currency: 'USD'
+  }).format(volume)
   const arrow = change > 1 ? <UpArrow /> : <DownArrow />;
-  return <ListItem Icon={arrow} label={volume.toString()} />;
+  return <ListItem Icon={arrow} label={formattedVolume} />;
 };
 export default memo(VolumeLabel);
