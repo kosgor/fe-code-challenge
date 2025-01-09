@@ -1,5 +1,4 @@
 import React, { memo } from 'react';
-
 import './listItem.css';
 
 type ListItemProps = {

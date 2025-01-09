@@ -1,7 +1,7 @@
+import {memo} from 'react';
 import upIcon from '@/assets/up.png';
 import downIcon from '@/assets/down.png';
 import './trendIcon.css'
-import {memo} from 'react';
 
 type TrendIconProps = {
   direction: 'UP' | 'DOWN' | null;

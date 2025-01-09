@@ -1,6 +1,6 @@
 import './symbolCard.css';
 import { useAppSelector } from '@/hooks/redux';
-import { useGetCardClassName } from '@/components/SymbolCard/src/hooks/useGetCardClassName';
+import { useGetCardClassName } from './src/hooks/useGetCardClassName';
 import SymbolCardContent from './src/components/SymbolCardContent';
 import SymbolCardHeader from './src/components/SymbolCardHeader';
 

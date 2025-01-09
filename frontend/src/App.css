@@ -83,7 +83,6 @@ select {
   padding: 12px 24px 0;
   background-color: rgba(14, 17, 35, 0.02);
   min-height: 100%;
-
   overflow: hidden;
   height: 100vh;
 }
